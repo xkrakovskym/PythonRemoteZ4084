@@ -49,15 +49,15 @@ V ideálnom prípade definujte samostatné triedy, ktoré budú
 
 class InventoryManager:
     def __init__(self):
-        self.inventory = {}
+        self.inventory = {"Bible": 10}
 
-    def add_book(self, title, quantity):
+    def add_book(self, title: str, quantity: int) -> None:
         pass
 
-    def remove_book(self, title, quantity):
+    def remove_book(self, title: str, quantity: int) -> None:
         pass
 
-    def get_inventory(self):
+    def get_inventory(self) -> dict:
         pass
 
 
@@ -65,13 +65,13 @@ class SalesManager:
     def __init__(self):
         self.sales = []
 
-    def sell_book(self, title, quantity, inventory_manager):
+    def sell_book(self, title: str, quantity: int, inventory_manager: InventoryManager) -> None:
         pass
 
 
 class SalesReport:
     @staticmethod
-    def get_sales_report(sales):
+    def get_sales_report(sales: list) -> str:
         report = "Sales Report:\n"
         for sale in sales:
             report += f"Title: {sale[0]}, Quantity: {sale[1]}\n"
