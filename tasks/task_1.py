@@ -45,3 +45,34 @@ V ideálnom prípade definujte samostatné triedy, ktoré budú
 2 - starať sa o proces predaja (predaj kníh, uchovávanie údajov o predaji).
 3 - starať sa o vykazovanie predaja (generovanie prehľadu o predaji).
 """
+
+
+class InventoryManager:
+    def __init__(self):
+        self.inventory = {}
+
+    def add_book(self, title, quantity):
+        pass
+
+    def remove_book(self, title, quantity):
+        pass
+
+    def get_inventory(self):
+        pass
+
+
+class SalesManager:
+    def __init__(self):
+        self.sales = []
+
+    def sell_book(self, title, quantity, inventory_manager):
+        pass
+
+
+class SalesReport:
+    @staticmethod
+    def get_sales_report(sales):
+        report = "Sales Report:\n"
+        for sale in sales:
+            report += f"Title: {sale[0]}, Quantity: {sale[1]}\n"
+        return report
