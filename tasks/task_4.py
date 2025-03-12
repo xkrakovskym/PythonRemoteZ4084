@@ -14,7 +14,17 @@
 # printujme cache hit (argumenty sa nachadzaju v cache)
 # printujem cache miss (argumenty sa nenachadzaju v cache)
 def cache(fn):
-    pass
+    _cache = {}
+
+    def cacher(*args):
+        if args in _cache:
+            pass
+            print("cache hit!")
+        else:
+            pass
+            print("cache miss :(")
+
+    return cacher
 
 
 def add(a, b):
