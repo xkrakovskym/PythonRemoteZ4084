@@ -15,13 +15,13 @@
 
 class CustomerQueue:
     def __init__(self):
-        pass
+        self.customers = []
 
     def add_customer(self, name):
-        pass
+        self.customers.append(name)
 
     def __iter__(self):
-        pass
+        return CustomerQueueIterator(self.customers)
 
 
 class CustomerQueueIterator:
@@ -36,3 +36,10 @@ class CustomerQueueIterator:
 
 
 # pridajte aspon 5tich zakaznikov a vypiste ich pomocou for cyklu
+
+customer1 = "Bob"
+customer2 = "Alice"
+# z2
+# ...
+# zq
+# for z in zq:
