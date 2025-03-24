@@ -11,8 +11,11 @@
 
 from copy import copy
 
+
 class Vehicle:
-    def __init__(self, vehicle_type: str, speed: float, fuel: str, properties: list[str]):
+    def __init__(
+        self, vehicle_type: str, speed: float, fuel: str, properties: list[str]
+    ):
         self.vehicle_type = vehicle_type
         self.speed = speed
         self.fuel = fuel
@@ -33,9 +36,6 @@ car2 = car_prototype.clone()
 
 car1.properties.append("radio")
 print(car1)
-
-
-
 
 
 # vytvorenie zopar aut a motoriek

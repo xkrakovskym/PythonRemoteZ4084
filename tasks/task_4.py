@@ -10,6 +10,7 @@
 	6.	Skontrolujte, či má každá funkcia svoju vlastnú cache.
 """
 
+
 # Krok 1: Vytvorte dekorátor cache
 # printujme cache hit (argumenty sa nachadzaju v cache)
 # printujem cache miss (argumenty sa nenachadzaju v cache)
@@ -29,6 +30,7 @@ def cache(fn):
 
 def add(a, b):
     return a + b
+
 
 # zobrzenie metadat funkcie, skuste pridat @functools.wraps(func)
 print(add.__name__)

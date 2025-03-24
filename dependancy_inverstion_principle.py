@@ -13,10 +13,13 @@ class BadReportGenerator:
     def generate(self):
         self.database.connect()
         data = self.database.fetch_data()
-        return f"Report:\n" + "\n".join([f"{key}: {value}" for key, value in data.items()])
+        return f"Report:\n" + "\n".join(
+            [f"{key}: {value}" for key, value in data.items()]
+        )
 
 
 from abc import ABC, abstractmethod
+
 
 class DataSource(ABC):
     @abstractmethod
@@ -51,12 +54,14 @@ class ReportGenerator:
     def generate(self):
         self.data_source.connect()
         data = self.data_source.fetch_data()
-        return f"Report:\n" + "\n".join([f"{key}: {value}" for key, value in data.items()])
+        return f"Report:\n" + "\n".join(
+            [f"{key}: {value}" for key, value in data.items()]
+        )
+
 
 postgre_db = PostgreSQLDatabase()
 report_generator = ReportGenerator(postgre_db)
 report = report_generator.generate()
-#print(report)
+# print(report)
 
-print("text".join(["1","2","3"]))
-
+print("text".join(["1", "2", "3"]))

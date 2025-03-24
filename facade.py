@@ -16,6 +16,7 @@ class Thermostat:
         self.temperature = temperature
         print(f"Setting temperature to {temperature}")
 
+
 class SecuritySystem:
     @staticmethod
     def activate():
@@ -42,7 +43,6 @@ class HomeAutomationFacade:
         self.security_system.deactivate()
         self.light.on()
         self.thermostat.set_temperature(22)
-
 
 
 home_automation = HomeAutomationFacade(Light(), Thermostat(20), SecuritySystem())

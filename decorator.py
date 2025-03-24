@@ -11,6 +11,7 @@ class BasicTextProcessor(TextProcessor):
     def process(self, text):
         return text
 
+
 class TextDecorator(TextProcessor):
     def __init__(self, processor):
         self.processor = processor

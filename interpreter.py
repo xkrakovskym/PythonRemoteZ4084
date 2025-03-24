@@ -12,7 +12,7 @@ class MathOperationApplier:
         elif math_operation == "/":
             return first / second
         elif math_operation == "**":
-            return first ** second
+            return first**second
         else:
             raise ArithmeticError()
 
@@ -35,11 +35,10 @@ class PythonStyleWithoutOrderMathOperationInterpreter(Interpreter):
         for i in range(1, len(split_data), 2):
             operation = split_data[i]
             next_value = float(split_data[i + 1])
-            value = self.math_operation_applier.apply(
-                operation, value, next_value
-            )
+            value = self.math_operation_applier.apply(operation, value, next_value)
 
         return value
+
 
 math_operation_applier = MathOperationApplier()
 interpreter = PythonStyleWithoutOrderMathOperationInterpreter(math_operation_applier)

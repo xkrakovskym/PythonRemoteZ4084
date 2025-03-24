@@ -1,5 +1,6 @@
 import pickle
 
+
 class Student:
     def __init__(self, name, age, grades):
         self.name = name
@@ -10,8 +11,8 @@ class Student:
         return f"name: {self.name}: age: {self.age}, grades:{self.grades}"
 
 
-alice = Student("Alice", 20, [1,1,1,1,2])
-bob = Student("Bob", 25, [2,3,1,2,1,4])
+alice = Student("Alice", 20, [1, 1, 1, 1, 2])
+bob = Student("Bob", 25, [2, 3, 1, 2, 1, 4])
 students = [alice, bob]
 file_path = "students.pkl"
 

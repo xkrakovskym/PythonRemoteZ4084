@@ -13,6 +13,7 @@
 	•	Použite iterátor na prechod cez zákazníkov vo fronte a vypíšte ich mená (ako keby boli obslúžení).
 """
 
+
 class CustomerQueue:
     def __init__(self):
         self.customers = []

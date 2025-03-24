@@ -2,6 +2,7 @@ class Book:
     """
     This is a clas for book.
     """
+
     def __init__(self, title, author):
         self.title = title
         self.author = author
@@ -49,7 +50,7 @@ book_collection.add_book(book2)
 book_collection.add_book(book3)
 
 for book in book_collection:
-    pass #print(book)
+    pass  # print(book)
 
 book_collection_iterator = iter(book_collection)
 print(next(book_collection_iterator))

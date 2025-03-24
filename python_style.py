@@ -6,5 +6,5 @@ class Order:
     def __init__(self):
         pass
 
-print(Order.__doc__)
 
+print(Order.__doc__)

@@ -26,6 +26,7 @@ class UserObserver(BaseObserver):
     def get_observer_type(self):
         return "USER"
 
+
 class AdminObserver(BaseObserver):
     def __init__(self, chat_channel, admin_name):
         super().__init__(chat_channel)
@@ -33,7 +34,9 @@ class AdminObserver(BaseObserver):
         print(f"Admin {self._admin_name} is joining the {chat_channel.get_name()}")
 
     def handle_message(self, message, user_type):
-            print(f"{self._admin_name} sees message {message} from user whose type is {user_type}")
+        print(
+            f"{self._admin_name} sees message {message} from user whose type is {user_type}"
+        )
 
     def get_observer_type(self):
         return "ADMIN"
@@ -66,6 +69,7 @@ class ChatChannel:
     def get_name(self):
         return self.name
 
+
 chat_channel = ChatChannel("Design Patterns class")
 user_1 = UserObserver(chat_channel, "Alice")
 user_2 = UserObserver(chat_channel, "Bob")
@@ -75,4 +79,3 @@ admin_2 = AdminObserver(chat_channel, "SuperAdmin")
 user_1.send_message("Hi all")
 user_2.send_message("Hi there")
 admin_1.send_message("Hello for admins")
-

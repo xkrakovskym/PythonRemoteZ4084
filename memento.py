@@ -1,5 +1,6 @@
 import pickle
 
+
 class SomeSimpleClass:
     def __init__(self, name="", count=0):
         self.name = name

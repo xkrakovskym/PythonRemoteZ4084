@@ -5,7 +5,9 @@ class BadReportGenerator:
 
     def generate(self):
         if self.report_type == "text":
-            return "Report:\n" + "\n".join([f"{key}: {value}" for key, value in self.data.items()])
+            return "Report:\n" + "\n".join(
+                [f"{key}: {value}" for key, value in self.data.items()]
+            )
         elif self.report_type == "html":
             html_content = "<html><body><h1>Report</h1><ul>"
             for key, value in self.data.items():
@@ -24,7 +26,9 @@ class ReportGenerator:
         self.data = data
 
     def generate(self):
-        return "Report:\n" + "\n".join([f"{key}: {value}" for key, value in self.data.items()])
+        return "Report:\n" + "\n".join(
+            [f"{key}: {value}" for key, value in self.data.items()]
+        )
 
 
 class HTMLReportGenerator(ReportGenerator):
@@ -40,4 +44,3 @@ class PDFReportGenerator(ReportGenerator):
     def generate(self):
         # Imagine this is a complex PDF generation logic
         return f"PDF Report -- {self.data}"
-

@@ -11,11 +11,13 @@ def my_decorator(func):
         print("After calling func")
 
         return result
+
     return wrapper
 
 
 @my_decorator
 def say_hello(name):
     print(f"Hello {name}!")
+
 
 say_hello("Michal")

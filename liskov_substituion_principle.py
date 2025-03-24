@@ -12,6 +12,7 @@ class Ostrich(Bird):
     def fly(self):
         raise NotImplementedError("Ostriches cannot fly!")
 
+
 """
 Bad example:
 bird1 = Bird()
@@ -30,6 +31,7 @@ class CorrectBird(ABC):
     @abstractmethod
     def move(self):
         pass
+
 
 class FlyingBird(CorrectBird):
     def move(self):

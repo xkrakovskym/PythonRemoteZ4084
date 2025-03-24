@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class BadPrinter(ABC):
     @abstractmethod
     def print(self, document):
@@ -13,6 +14,7 @@ class BadPrinter(ABC):
     def scan(self, document):
         pass
 
+
 class XeroxPrinter(BadPrinter):
     def print(self, document):
         print(document)
@@ -23,10 +25,12 @@ class Printer(ABC):
     def print(self, document):
         pass
 
+
 class Fax(ABC):
     @abstractmethod
     def fax(self, document):
         pass
+
 
 class Scanner(ABC):
     @abstractmethod
@@ -45,4 +49,3 @@ class NewPrinter(Printer, Fax):
 
     def fax(self, document):
         pass
-

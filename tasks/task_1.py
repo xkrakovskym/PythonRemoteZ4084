@@ -65,7 +65,9 @@ class SalesManager:
     def __init__(self):
         self.sales = []
 
-    def sell_book(self, title: str, quantity: int, inventory_manager: InventoryManager) -> None:
+    def sell_book(
+        self, title: str, quantity: int, inventory_manager: InventoryManager
+    ) -> None:
         pass
 
 

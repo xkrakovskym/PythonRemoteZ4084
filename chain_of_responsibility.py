@@ -1,5 +1,6 @@
 import random
 
+
 class Credentials:
     def get_credentials(self, user_id):
         pass
@@ -81,6 +82,7 @@ class ChainAuthenticationElement:
         else:
             print("All authentication methods used, credentials not authentificated")
             return False
+
 
 user_name_pass_handler = UserNameAndPasswordAuthenticationHandler()
 bear_token_handler = BearerTokenAuthenticationHandler()

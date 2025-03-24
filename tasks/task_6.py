@@ -55,10 +55,12 @@ class EnergyManager(Observer):
     def update(self, player):
         pass
 
+
 def main():
     player = Player(health=100, energy=100)
     healer = Healer()
     energy_manager = EnergyManager()
+
 
 if __name__ == "__main__":
     main()

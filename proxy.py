@@ -22,8 +22,9 @@ class ImageProxy(Image):
 
     def show(self):
         if self._real_image is None:
-           self._real_image = RealImage(self.file_name)
+            self._real_image = RealImage(self.file_name)
         self._real_image.show()
+
 
 proxy_image = ImageProxy("/home/user/photo.jpeg")
 proxy_image.show()

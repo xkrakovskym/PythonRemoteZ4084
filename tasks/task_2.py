@@ -4,6 +4,7 @@ a veľkosti pizze. Použite nástroj Pattern Builder a určitým spôsobom zapú
 ktorý udržiava proces konštrukcie oddelený od reprezentácie, čo uľahčuje pridávanie nových možností bez úpravy existujúceho kódu.
 """
 
+
 class Pizza:
     def __init__(self):
         self.topping: list
@@ -20,5 +21,6 @@ class PizzaBuilder:
 
     def build(self):
         return self._pizza
+
 
 # skontrolujte ci ma pizza cesto a nejaku velkost

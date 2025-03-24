@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Beverage(ABC):
     def __init__(self, payment_method):
         self.payment_method = payment_method

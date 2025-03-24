@@ -17,6 +17,7 @@ class Student:
     def get_grades(self):
         return self.grades
 
+
 class Favorite:
     def __init__(self, first_name, last_name, email, age, grades):
         self.first_name = first_name
@@ -50,7 +51,7 @@ class FavoriteAdapter(Student):
         super().__init__(full_name, contact_details, age, grades)
 
 
-favorite = Favorite("Michal", "Krakovsky", "m@k.com", 32, [1,2,3])
+favorite = Favorite("Michal", "Krakovsky", "m@k.com", 32, [1, 2, 3])
 
 student1 = FavoriteAdapter(favorite)
 
