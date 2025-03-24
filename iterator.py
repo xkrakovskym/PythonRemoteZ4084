@@ -1,4 +1,7 @@
 class Book:
+    """
+    This is a clas for book.
+    """
     def __init__(self, title, author):
         self.title = title
         self.author = author
@@ -52,4 +55,9 @@ book_collection_iterator = iter(book_collection)
 print(next(book_collection_iterator))
 print(next(book_collection_iterator))
 print(next(book_collection_iterator))
-print(next(book_collection_iterator))
+
+a = BookCollection
+print(a)
+
+b = BookCollection()
+print(b)
